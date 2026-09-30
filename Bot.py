@@ -61,4 +61,4 @@ async def on_message(message: discord.Message):
     await bot.process_commands(message)
 
 # ⚠️ 請將下方的引號內容替換為你的機器人 Token
-bot.run("MTU1NDg3MzU2MzU4Mjk2Mzc5Mg.Gctmz9.klT0RGzSThGS9r-20yPMyPcW86ApgFbJqwC7Kg")
+bot.run("MTU1NDg3MzU2MzU4Mjk2Mzc5Mg.GYcjuo.legA99sxzQLzhqvG2VM--MqkCZJs6GZObPJyNI")

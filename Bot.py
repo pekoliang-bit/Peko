@@ -60,4 +60,6 @@ async def on_message(message: discord.Message):
 
     await bot.process_commands(message)
 
-bot.run("MTU1NDg3MzU2MzU4Mjk2Mzc5Mg.GJyzP7.ytY9osfWjyHtLsDXuw7MoK0oK26kwbfhYfqFlc")
+TOKEN = os.getenv("DISCORD_TOKEN")
+bot.run(TOKEN)
+

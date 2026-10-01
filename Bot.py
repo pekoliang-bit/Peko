@@ -61,5 +61,6 @@ async def on_message(message: discord.Message):
     await bot.process_commands(message)
 
 TOKEN = os.getenv("DISCORD_TOKEN")
+print(f"讀取到的 Token 前 6 碼為: {str(TOKEN)[:6]}")
 bot.run(TOKEN)
 

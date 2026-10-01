@@ -60,4 +60,4 @@ async def on_message(message: discord.Message):
 
     await bot.process_commands(message)
 
-bot.run("MTU1NDg3MzU2MzU4Mjk2Mzc5Mg.G8ohJ7.-sEglxVHJrdjOyfYpu5B5sHGFp4cos5EYeuGZE")
+bot.run("MTU1NDg3MzU2MzU4Mjk2Mzc5Mg.GXVkX8.GWsq1aJNziKNb5lYsE8OS4PpNEtfs40XViZMNs")

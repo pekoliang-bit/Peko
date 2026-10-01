@@ -1,8 +1,25 @@
 import os
 import re
+import threading
 import discord
 from discord.ext import commands
+from flask import Flask
 
+# 建立微型假網頁，供 Render 檢測端口，避免超時強制關閉
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bot is alive!"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
+# 背景啟動網頁服務
+threading.Thread(target=run_flask, daemon=True).start()
+
+# ----------------- Discord 機器人本體 -----------------
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -61,6 +78,4 @@ async def on_message(message: discord.Message):
     await bot.process_commands(message)
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-print(f"讀取到的 Token 前 6 碼為: {str(TOKEN)[:6]}")
 bot.run(TOKEN)
-
